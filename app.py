@@ -51,8 +51,7 @@ def shopping_list_post():
             for item in request.form['text'].split():
               
               shop_list.append(item)
-
-              
+		
               
             return render_template('shopping_list.html', result="\n".join([str(item) for item in shop_list]))
           except ValueError:
