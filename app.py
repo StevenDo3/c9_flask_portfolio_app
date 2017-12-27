@@ -31,8 +31,8 @@ def add_numbers_post():
   	      	for str_num in request.form['text'].split():
   	      		total *= int(str_num)
   	      	return render_template('add_numbers.html', result= str(total))
-					except ValueError:
-  	     		return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
+except ValueError:
+  	     	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
 
 @app.route('/shopping_list', methods=['GET','POST'])
@@ -53,7 +53,7 @@ def shopping_list_post():
 		
               
             return render_template('shopping_list.html', result="\n".join([str(item) for item in shop_list]))
-   				except ValueError:
+except ValueError:
             return "Easy now! Let's keep it simple! Just words with a space between them"
           
   	      
